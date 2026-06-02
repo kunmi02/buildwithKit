@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+:root {
+  --background: #0f1515;
+  --foreground: #e8ecec;
+  --muted: #9aa3a3;
+  --panel: #151d1d;
+  --panel-light: #1d2828;
+  --accent: #d8dde0;
+  --green: #77b255;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+::selection {
+  background: rgba(119, 178, 85, 0.35);
+}
+
+.file-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-radius: 14px;
+  padding: 12px 14px;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.file-row:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateX(4px);
+}
+
+.file-icon {
+  width: 28px;
+  height: 34px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #ffffff, #dfe4e4);
+  position: relative;
+  flex: none;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+}
+
+.file-icon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top: 9px solid #cbd3d3;
+  border-left: 9px solid transparent;
+}
+
+.file-icon.csv {
+  background: linear-gradient(180deg, #f7ffff, #d9eeee);
+}
+
+.file-icon.txt {
+  background: linear-gradient(180deg, #fff, #e8e8e8);
+}
+
+.glow-grid {
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(119,178,85,.18), transparent 32%),
+    radial-gradient(circle at 80% 0%, rgba(255,255,255,.08), transparent 25%),
+    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: auto, auto, 48px 48px, 48px 48px;
+}
