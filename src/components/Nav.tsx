@@ -4,12 +4,12 @@ import { CHECKOUT_URL } from "@/lib/constants";
 export function Nav() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0f1515]/85 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
-        <Link href="/faceless-blueprint" className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#77b255] font-black text-[#101515]">F</div>
-          <div>
-            <p className="font-black leading-none">Faceless Blueprint</p>
-            <p className="text-xs text-[#9aa3a3]">Cloneable channel kits</p>
+      <div className="mx-auto flex min-w-0 max-w-7xl items-center justify-between gap-3 px-5 py-4">
+        <Link href="/faceless-blueprint" className="flex min-w-0 items-center gap-2 sm:gap-3">
+          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#77b255] text-sm font-black text-[#101515] sm:h-10 sm:w-10">F</div>
+          <div className="min-w-0">
+            <p className="truncate font-black leading-none">Faceless Blueprint</p>
+            <p className="hidden text-xs text-[#9aa3a3] sm:block">Cloneable channel kits</p>
           </div>
         </Link>
         <nav className="hidden items-center gap-6 text-sm text-[#c7cccc] md:flex">
@@ -18,7 +18,7 @@ export function Nav() {
           <a href="#how" className="hover:text-white">How it works</a>
           <a href="#faq" className="hover:text-white">FAQ</a>
         </nav>
-        <a href={CHECKOUT_URL} className="rounded-full bg-white px-5 py-2 text-sm font-bold text-[#101515] hover:bg-[#d8dde0]">
+        <a href={CHECKOUT_URL} className="shrink-0 rounded-full bg-white px-3 py-2 text-xs font-bold text-[#101515] hover:bg-[#d8dde0] sm:px-5 sm:text-sm">
           Get the Kit
         </a>
       </div>

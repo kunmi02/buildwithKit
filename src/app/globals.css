@@ -17,10 +17,12 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
   margin: 0;
+  overflow-x: clip;
   background: var(--background);
   color: var(--foreground);
 }
@@ -33,6 +35,7 @@ body {
   display: flex;
   align-items: center;
   gap: 14px;
+  min-width: 0;
   border-radius: 14px;
   padding: 12px 14px;
   transition: background 160ms ease, transform 160ms ease;

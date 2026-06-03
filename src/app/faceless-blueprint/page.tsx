@@ -46,27 +46,27 @@ const steps = [
 
 export default function FacelessBlueprintPage() {
   return (
-    <main className="min-h-screen bg-[#0f1515] text-[#e8ecec]">
+    <main className="min-h-screen overflow-x-clip bg-[#0f1515] text-[#e8ecec]">
       <Nav />
 
       <section className="glow-grid px-5 py-20 md:py-28">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1fr_0.85fr]">
-          <div>
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-[#cdd4d4]">
-              <span className="h-2 w-2 rounded-full bg-[#77b255]" />
+        <div className="mx-auto grid min-w-0 max-w-7xl items-center gap-12 lg:grid-cols-[1fr_0.85fr]">
+          <div className="min-w-0">
+            <div className="mb-6 inline-flex max-w-full flex-wrap items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-[#cdd4d4]">
+              <span className="h-2 w-2 shrink-0 rounded-full bg-[#77b255]" />
               10 complete faceless YouTube channel blueprints
             </div>
-            <h1 className="max-w-4xl text-5xl font-black leading-[0.95] tracking-tight md:text-7xl">
+            <h1 className="max-w-4xl text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl md:text-7xl md:leading-[0.95]">
               Pick one. Clone it. Launch tomorrow.
             </h1>
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-[#b7c0c0] md:text-xl">
+            <p className="mt-7 max-w-2xl text-base leading-7 text-[#b7c0c0] sm:text-lg sm:leading-8 md:text-xl">
               A downloadable starter folder for beginners who want to start a faceless YouTube channel without guessing the niche, topics, prompts, calendar, or publishing plan.
             </p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-              <a href={CHECKOUT_URL} className="rounded-full bg-[#77b255] px-8 py-4 text-center font-black text-[#101515] shadow-glow hover:bg-[#8ed36a]">
+              <a href={CHECKOUT_URL} className="w-full rounded-full bg-[#77b255] px-6 py-4 text-center font-black text-[#101515] shadow-glow hover:bg-[#8ed36a] sm:w-auto sm:px-8">
                 Get Instant Access — $10
               </a>
-              <a href="#inside" className="rounded-full border border-white/15 px-8 py-4 text-center font-black text-white hover:bg-white/10">
+              <a href="#inside" className="w-full rounded-full border border-white/15 px-6 py-4 text-center font-black text-white hover:bg-white/10 sm:w-auto sm:px-8">
                 See What’s Included
               </a>
             </div>
