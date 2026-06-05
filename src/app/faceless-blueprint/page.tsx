@@ -52,9 +52,9 @@ export default function FacelessBlueprintPage() {
       <section className="glow-grid px-5 py-20 md:py-28">
         <div className="mx-auto grid min-w-0 max-w-7xl items-center gap-12 lg:grid-cols-[1fr_0.85fr]">
           <div className="min-w-0">
-            <div className="mb-6 inline-flex max-w-full flex-wrap items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-[#cdd4d4]">
-              <span className="h-2 w-2 shrink-0 rounded-full bg-[#77b255]" />
-              10 complete faceless YouTube channel blueprints
+            <div className="mb-6 flex max-w-full items-start gap-2.5 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm leading-relaxed text-[#cdd4d4]">
+              <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[#77b255]" aria-hidden="true" />
+              <span className="min-w-0">10 complete faceless YouTube channel blueprints</span>
             </div>
             <h1 className="max-w-4xl text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl md:text-7xl md:leading-[0.95]">
               Pick one. Clone it. Launch tomorrow.
