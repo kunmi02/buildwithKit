@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CHECKOUT_URL } from "@/lib/constants";
+import { CheckoutLink } from "@/components/CheckoutLink";
 
 export function Nav() {
   return (
@@ -18,9 +18,9 @@ export function Nav() {
           <a href="#how" className="hover:text-white">How it works</a>
           <a href="#faq" className="hover:text-white">FAQ</a>
         </nav>
-        <a href={CHECKOUT_URL} className="shrink-0 rounded-full bg-white px-3 py-2 text-xs font-bold text-[#101515] hover:bg-[#d8dde0] sm:px-5 sm:text-sm">
+        <CheckoutLink className="shrink-0 rounded-full bg-white px-3 py-2 text-xs font-bold text-[#101515] hover:bg-[#d8dde0] sm:px-5 sm:text-sm">
           Get the Kit
-        </a>
+        </CheckoutLink>
       </div>
     </header>
   );

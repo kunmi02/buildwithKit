@@ -1,8 +1,8 @@
+import { CheckoutLink } from "@/components/CheckoutLink";
 import { FileList } from "@/components/FileList";
 import { Footer } from "@/components/Footer";
 import { Nav } from "@/components/Nav";
 import { SectionHeader } from "@/components/SectionHeader";
-import { CHECKOUT_URL } from "@/lib/constants";
 
 const niches = [
   "Personal Finance",
@@ -63,9 +63,9 @@ export default function FacelessBlueprintPage() {
               A downloadable starter folder for beginners who want to start a faceless YouTube channel without guessing the niche, topics, prompts, calendar, or publishing plan.
             </p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-              <a href={CHECKOUT_URL} className="w-full rounded-full bg-[#77b255] px-6 py-4 text-center font-black text-[#101515] shadow-glow hover:bg-[#8ed36a] sm:w-auto sm:px-8">
+              <CheckoutLink className="w-full rounded-full bg-[#77b255] px-6 py-4 text-center font-black text-[#101515] shadow-glow hover:bg-[#8ed36a] sm:w-auto sm:px-8">
                 Get Instant Access — $10
-              </a>
+              </CheckoutLink>
               <a href="#inside" className="w-full rounded-full border border-white/15 px-6 py-4 text-center font-black text-white hover:bg-white/10 sm:w-auto sm:px-8">
                 See What’s Included
               </a>
@@ -132,9 +132,9 @@ export default function FacelessBlueprintPage() {
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#aeb7b7]">
             Get the full Faceless Blueprint folder with channel packs, prompts, calendar template, and clipping bonus.
           </p>
-          <a href={CHECKOUT_URL} className="mt-8 inline-flex rounded-full bg-white px-10 py-4 font-black text-[#101515] hover:bg-[#d8dde0]">
+          <CheckoutLink className="mt-8 inline-flex rounded-full bg-white px-10 py-4 font-black text-[#101515] hover:bg-[#d8dde0]">
             Buy The Zip Folder
-          </a>
+          </CheckoutLink>
         </div>
       </section>
 
@@ -148,7 +148,7 @@ export default function FacelessBlueprintPage() {
           {[
             ["Is this a course?", "No. It is a downloadable starter kit/folder with PDFs, prompts, and a calendar template."],
             ["Do I need to show my face?", "No. The product focuses on faceless channel formats and content planning."],
-            ["How do I receive it?", "After payment, the checkout platform sends access to the downloadable file."],
+            ["How do I receive it?", "After payment on Selar, you get an email with your download link and access to the product."],
             ["Is it beginner-friendly?", "Yes. It is made for people who need structure before creating their first videos."],
           ].map(([q, a]) => (
             <div key={q} className="rounded-2xl border border-white/10 bg-[#151d1d] p-6">
