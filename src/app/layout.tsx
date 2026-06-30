@@ -1,18 +1,25 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { BRAND_NAME, META_PIXEL_ID, TIKTOK_PIXEL_ID } from "@/lib/constants";
 
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
 export const metadata: Metadata = {
-  title: `${BRAND_NAME} — Faceless YouTube Starter Kit`,
+  title: `${BRAND_NAME} — Stop Researching. Start Publishing.`,
   description:
-    "10 cloneable faceless YouTube channel blueprints, setup prompts, a 30-day calendar, and a clipping bonus.",
+    "10 done-for-you faceless YouTube channel blueprints in one complete PDF. No face, no guesswork, no chaos.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" className={inter.variable}>
+      <body className="font-sans antialiased">
         {META_PIXEL_ID ? (
           <>
             <Script id="meta-pixel" strategy="afterInteractive">

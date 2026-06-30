@@ -2,16 +2,18 @@ import { PRODUCT_FILENAME, productSections } from "@/lib/constants";
 
 export function FileList() {
   return (
-    <div className="min-w-0 rounded-[2rem] border border-white/10 bg-[#151d1d] p-5 shadow-2xl md:p-7">
-      <div className="mb-6 flex min-w-0 items-center justify-between gap-3 border-b border-white/10 pb-5">
+    <div className="min-w-0 rounded-[2rem] border border-white/[0.08] bg-[#121818] p-5 shadow-2xl card-premium md:p-7">
+      <div className="mb-6 flex min-w-0 items-center justify-between gap-3 border-b border-white/[0.06] pb-5">
         <div className="min-w-0">
-          <p className="text-sm text-[#9aa3a3]">What lands in your inbox</p>
+          <p className="text-sm text-[#8a9494]">What lands in your inbox</p>
           <h3 className="text-xl font-black sm:text-2xl">One file. Everything inside.</h3>
         </div>
-        <div className="shrink-0 rounded-xl bg-[#77b255] px-3 py-2 text-sm font-black text-[#101515]">1 download</div>
+        <div className="shrink-0 rounded-xl bg-gradient-to-r from-emerald-400 to-cyan-400 px-3 py-2 text-sm font-black text-[#0a0e0e]">
+          1 download
+        </div>
       </div>
 
-      <div className="file-row mb-4 border border-[#77b255]/25 bg-[#77b255]/10">
+      <div className="file-row mb-4 border border-emerald-500/25 bg-emerald-500/10">
         <span className="file-icon pdf" />
         <div className="min-w-0">
           <span className="block break-all text-[15px] font-black text-white md:text-lg">{PRODUCT_FILENAME}</span>

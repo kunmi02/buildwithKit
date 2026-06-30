@@ -3,12 +3,15 @@
 import { CheckoutLink } from "@/components/CheckoutLink";
 import { FileList } from "@/components/FileList";
 import { Footer } from "@/components/Footer";
+import { HeroImage } from "@/components/HeroImage";
 import { Nav } from "@/components/Nav";
 import { PriceCompare, SalePrice, RegularPrice } from "@/components/PriceCompare";
 import { usePricing } from "@/components/PricingProvider";
 import { SaleCountdownLine } from "@/components/SaleCountdown";
+import { SaleCountdownTimer } from "@/components/SaleCountdownTimer";
 import { SaleUrgencyBar } from "@/components/SaleUrgencyBar";
 import { SectionHeader } from "@/components/SectionHeader";
+import { TrustBadges } from "@/components/TrustBadges";
 
 const niches = [
   "Personal Finance",
@@ -151,7 +154,7 @@ function FaqSection() {
       />
       <div className="mx-auto grid max-w-5xl gap-5 md:grid-cols-2">
         {faqs.map(([q, a]) => (
-          <div key={q} className="rounded-2xl border border-white/10 bg-[#151d1d] p-6">
+          <div key={q} className="rounded-2xl border border-white/10 bg-[#121818] p-6">
             <h3 className="text-xl font-black">{q}</h3>
             <p className="mt-3 leading-7 text-[#aeb7b7]">{a}</p>
           </div>
@@ -162,10 +165,10 @@ function FaqSection() {
         <p className="mt-4 text-lg text-[#aeb7b7]">
           <SalePrice className="font-black text-white" />. One file. One niche. Thirty days mapped. No more “I’ll start when I’m ready.”
         </p>
-        <SaleCountdownLine className="mt-4 text-sm text-[#ffb347]" />
+        <SaleCountdownLine className="mt-4 text-sm text-amber-300" />
         <CheckoutLink
           showPrice
-          className="mt-8 inline-flex rounded-full bg-[#77b255] px-10 py-4 font-black text-[#101515] shadow-glow hover:bg-[#8ed36a]"
+          className="mt-8 inline-flex rounded-full bg-emerald-400 px-10 py-4 font-black text-[#0a0e0e] shadow-glow hover:bg-emerald-300"
         >
           Get Instant Access
         </CheckoutLink>
@@ -178,59 +181,77 @@ export function FacelessBlueprintContent() {
   const { pricing } = usePricing();
 
   return (
-    <main className="min-h-screen overflow-x-clip bg-[#0f1515] text-[#e8ecec]">
+    <main className="min-h-screen overflow-x-clip bg-[#0a0e0e] text-[#f0f4f4]">
       <SaleUrgencyBar />
       <Nav />
 
-      <section className="glow-grid px-5 py-20 md:py-28">
-        <div className="mx-auto grid min-w-0 max-w-7xl items-center gap-12 lg:grid-cols-[1fr_0.85fr]">
+      <section className="glow-grid relative px-5 pb-20 pt-12 md:pb-28 md:pt-20">
+        <div className="mx-auto grid min-w-0 max-w-7xl items-start gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="min-w-0">
-            <div className="mb-4 inline-flex rounded-full border border-[#ffb347]/40 bg-[#ffb347]/10 px-4 py-1.5 text-xs font-black uppercase tracking-[0.15em] text-[#ffb347]">
-              Launch sale — {pricing.discountPercent}% off · limited time
-            </div>
-            <div className="mb-6 flex max-w-full items-start gap-2.5 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm leading-relaxed text-[#cdd4d4]">
-              <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[#77b255]" aria-hidden="true" />
-              <span className="min-w-0">
-                For beginners who want a faceless YouTube channel — without guessing niche, topics, or what to post first
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-400/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-amber-300">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-60" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-amber-400" />
               </span>
+              Limited time — {pricing.discountPercent}% off launch sale
             </div>
-            <h1 className="max-w-4xl text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl md:text-7xl md:leading-[0.95]">
+
+            <h1 className="max-w-3xl text-4xl font-black leading-[1.02] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl lg:leading-[0.98]">
               Stop researching.
-              <span className="block text-[#77b255]">Start publishing.</span>
+              <span className="mt-1 block text-gradient-accent">Start publishing.</span>
             </h1>
-            <p className="mt-7 max-w-2xl text-base leading-7 text-[#b7c0c0] sm:text-lg sm:leading-8 md:text-xl">
-              10 done-for-you faceless channel blueprints in one complete PDF. Pick one niche. Clone the plan. Download a single file and have your first 30 days mapped before tomorrow morning — no face, no guesswork, no zip-folder chaos.
+
+            <p className="mt-6 max-w-xl text-base leading-7 text-[#a8b0b0] sm:text-lg sm:leading-8 md:text-xl">
+              10 done-for-you faceless YouTube channel blueprints in one complete PDF. No face, no guesswork, no chaos.
             </p>
-            <div className="mt-6">
-              <PriceCompare size="sm" align="left" />
+
+            <div className="mt-8 rounded-2xl border border-white/[0.08] bg-[#121818]/80 p-5 card-premium sm:p-6">
+              <PriceCompare size="md" showBadge align="left" />
+              <div className="mt-5 border-t border-white/[0.06] pt-5">
+                <SaleCountdownTimer />
+              </div>
             </div>
-            <SaleCountdownLine className="mt-3 text-sm text-[#aeb7b7]" />
-            <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
               <CheckoutLink
                 showPrice
-                className="w-full rounded-full bg-[#77b255] px-6 py-4 text-center font-black text-[#101515] shadow-glow hover:bg-[#8ed36a] sm:w-auto sm:px-8"
+                className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-emerald-400 to-cyan-400 px-8 py-4 text-center text-sm font-black text-[#0a0e0e] shadow-glow-emerald transition hover:brightness-110 sm:w-auto sm:text-base"
               >
                 Get Instant Access
               </CheckoutLink>
               <a
                 href="#offer"
-                className="w-full rounded-full border border-white/15 px-6 py-4 text-center font-black text-white hover:bg-white/10 sm:w-auto sm:px-8"
+                className="inline-flex w-full items-center justify-center rounded-full border border-white/15 bg-white/[0.03] px-8 py-4 text-center text-sm font-bold text-white transition hover:bg-white/[0.07] sm:w-auto sm:text-base"
               >
                 See the Full Offer
               </a>
             </div>
-            <p className="mt-4 text-sm text-[#9aa3a3]">
-              One-time <SalePrice />. One merged PDF. Instant download. Price returns to <RegularPrice /> after the sale.
+
+            <TrustBadges className="mt-6" />
+            <p className="mt-4 text-sm text-[#8a9494]">
+              One-time <SalePrice className="font-bold text-white" />. Instant download. Price returns to{" "}
+              <RegularPrice className="line-through" /> after the sale.
             </p>
           </div>
 
+          <HeroImage />
+        </div>
+      </section>
+
+      <section className="border-y border-white/[0.06] bg-[#0d1212] px-5 py-16 md:py-20">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader
+            eyebrow="What's inside"
+            title="One merged PDF. Everything you need to launch."
+            subtitle="No zip folders. No scattered files. Download once and every blueprint, prompt, and calendar is right there."
+          />
           <FileList />
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-[#111818] px-5 py-20">
+      <section className="border-y border-white/10 bg-[#0d1212] px-5 py-20">
         <div className="mx-auto max-w-4xl text-center">
-          <p className="text-sm font-black uppercase tracking-[0.25em] text-[#77b255]">Sound familiar?</p>
+          <p className="text-sm font-black uppercase tracking-[0.25em] text-emerald-400">Sound familiar?</p>
           <h2 className="mt-4 text-3xl font-black leading-tight sm:text-4xl md:text-5xl">
             You don’t need another “how to start YouTube” video.
           </h2>
@@ -244,8 +265,8 @@ export function FacelessBlueprintContent() {
               "Motivation Monday, ghost mode by Thursday",
               "Watching faceless channels win while you’re still “getting ready”",
             ].map((item) => (
-              <li key={item} className="flex items-start gap-3 rounded-2xl border border-white/10 bg-[#151d1d] px-5 py-4">
-                <span className="mt-1 text-[#77b255]" aria-hidden="true">
+              <li key={item} className="flex items-start gap-3 rounded-2xl border border-white/10 bg-[#121818] px-5 py-4">
+                <span className="mt-1 text-emerald-400" aria-hidden="true">
                   ✕
                 </span>
                 <span>{item}</span>
@@ -264,26 +285,26 @@ export function FacelessBlueprintContent() {
         />
         <div className="mx-auto grid max-w-7xl gap-5 md:grid-cols-2">
           {falseBeliefs.map((item) => (
-            <article key={item.myth} className="rounded-[1.6rem] border border-white/10 bg-[#151d1d] p-7">
+            <article key={item.myth} className="rounded-[1.6rem] border border-white/10 bg-[#121818] p-7">
               <p className="text-sm font-black uppercase tracking-[0.2em] text-[#9aa3a3]">The lie</p>
               <h3 className="mt-2 text-xl font-black leading-snug text-[#e8ecec]">{item.myth}</h3>
-              <p className="mt-5 text-sm font-black uppercase tracking-[0.2em] text-[#77b255]">The truth</p>
+              <p className="mt-5 text-sm font-black uppercase tracking-[0.2em] text-emerald-400">The truth</p>
               <p className="mt-2 leading-7 text-[#aeb7b7]">{item.truth}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <section id="offer" className="bg-[#111818] px-5 py-20">
+      <section id="offer" className="bg-[#0d1212] px-5 py-20">
         <OfferSectionHeader />
         <div className="mx-auto max-w-4xl space-y-4">
           {offerStack.map((item, index) => (
             <article
               key={item.title}
-              className="flex flex-col gap-4 rounded-[1.6rem] border border-white/10 bg-[#151d1d] p-6 sm:flex-row sm:items-start sm:justify-between sm:p-7"
+              className="flex flex-col gap-4 rounded-[1.6rem] border border-white/10 bg-[#121818] p-6 sm:flex-row sm:items-start sm:justify-between sm:p-7"
             >
               <div className="min-w-0 flex-1">
-                <p className="text-sm font-black text-[#77b255]">Component {String(index + 1).padStart(2, "0")}</p>
+                <p className="text-sm font-black text-emerald-400">Component {String(index + 1).padStart(2, "0")}</p>
                 <h3 className="mt-1 text-2xl font-black">{item.title}</h3>
                 <p className="mt-3 leading-7 text-[#aeb7b7]">{item.text}</p>
               </div>
@@ -294,13 +315,13 @@ export function FacelessBlueprintContent() {
             </article>
           ))}
 
-          <div className="rounded-[1.6rem] border-2 border-[#77b255]/40 bg-[#151d1d] p-8 text-center md:p-10">
+          <div className="rounded-[1.6rem] border-2 border-emerald-400/40 bg-[#121818] p-8 text-center md:p-10">
             <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
               <div>
                 <p className="text-sm text-[#9aa3a3]">Total stack value (USD)</p>
                 <p className="text-3xl font-black text-[#9aa3a3] line-through md:text-4xl">$1,181</p>
               </div>
-              <div className="hidden text-4xl font-black text-[#77b255] sm:block" aria-hidden="true">
+              <div className="hidden text-4xl font-black text-emerald-400 sm:block" aria-hidden="true">
                 →
               </div>
               <PriceCompare size="lg" showBadge align="center" />
@@ -311,7 +332,7 @@ export function FacelessBlueprintContent() {
             </p>
             <CheckoutLink
               showPrice
-              className="mt-8 inline-flex rounded-full bg-[#77b255] px-10 py-4 font-black text-[#101515] shadow-glow hover:bg-[#8ed36a]"
+              className="mt-8 inline-flex rounded-full bg-emerald-400 px-10 py-4 font-black text-[#0a0e0e] shadow-glow hover:bg-emerald-300"
             >
               Yes — Send Me the Playbook
             </CheckoutLink>
@@ -329,14 +350,14 @@ export function FacelessBlueprintContent() {
         <div className="mx-auto grid max-w-7xl gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {niches.map((niche, index) => (
             <div key={niche} className="rounded-2xl border border-white/10 bg-[#1b2424] p-5">
-              <p className="mb-4 text-sm font-black text-[#77b255]">{String(index + 1).padStart(2, "0")}</p>
+              <p className="mb-4 text-sm font-black text-emerald-400">{String(index + 1).padStart(2, "0")}</p>
               <h3 className="text-xl font-black">{niche}</h3>
             </div>
           ))}
         </div>
       </section>
 
-      <section id="how" className="bg-[#111818] px-5 py-20">
+      <section id="how" className="bg-[#0d1212] px-5 py-20">
         <SectionHeader
           eyebrow="Five steps. One evening."
           title="From download to first video plan — without the chaos."
@@ -344,8 +365,8 @@ export function FacelessBlueprintContent() {
         />
         <div className="mx-auto max-w-4xl space-y-4">
           {steps.map((step, index) => (
-            <div key={step.title} className="flex items-start gap-5 rounded-2xl border border-white/10 bg-[#151d1d] p-5 md:p-6">
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#77b255] text-lg font-black text-[#101515]">
+            <div key={step.title} className="flex items-start gap-5 rounded-2xl border border-white/10 bg-[#121818] p-5 md:p-6">
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-emerald-400 text-lg font-black text-[#0a0e0e]">
                 {index + 1}
               </span>
               <div>
@@ -359,8 +380,8 @@ export function FacelessBlueprintContent() {
 
       <section className="px-5 py-20">
         <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
-          <div className="rounded-[1.6rem] border border-[#77b255]/30 bg-[#151d1d] p-8">
-            <p className="text-sm font-black uppercase tracking-[0.2em] text-[#77b255]">This is for you if</p>
+          <div className="rounded-[1.6rem] border border-emerald-400/30 bg-[#121818] p-8">
+            <p className="text-sm font-black uppercase tracking-[0.2em] text-emerald-400">This is for you if</p>
             <ul className="mt-5 space-y-3 text-[#cdd4d4]">
               {[
                 "You want faceless income — no camera, no personal brand required",
@@ -369,7 +390,7 @@ export function FacelessBlueprintContent() {
                 "You’ll pick one niche and follow the playbook instead of collecting ten half-started ideas",
               ].map((item) => (
                 <li key={item} className="flex gap-3">
-                  <span className="text-[#77b255]" aria-hidden="true">
+                  <span className="text-emerald-400" aria-hidden="true">
                     ✓
                   </span>
                   <span>{item}</span>
@@ -377,7 +398,7 @@ export function FacelessBlueprintContent() {
               ))}
             </ul>
           </div>
-          <div className="rounded-[1.6rem] border border-white/10 bg-[#151d1d] p-8">
+          <div className="rounded-[1.6rem] border border-white/10 bg-[#121818] p-8">
             <p className="text-sm font-black uppercase tracking-[0.2em] text-[#9aa3a3]">Skip this if</p>
             <ul className="mt-5 space-y-3 text-[#aeb7b7]">
               {[
@@ -398,9 +419,9 @@ export function FacelessBlueprintContent() {
         </div>
       </section>
 
-      <section id="pricing" className="bg-[#111818] px-5 py-20">
-        <div className="mx-auto max-w-5xl rounded-[2rem] border border-[#ffb347]/25 bg-[#151d1d] p-8 text-center shadow-2xl md:p-14">
-          <p className="mb-3 text-sm font-black uppercase tracking-[0.25em] text-[#ffb347]">Launch sale — act before price goes up</p>
+      <section id="pricing" className="bg-[#0d1212] px-5 py-20">
+        <div className="mx-auto max-w-5xl rounded-[2rem] border border-amber-400/25 bg-[#121818] p-8 text-center shadow-2xl md:p-14">
+          <p className="mb-3 text-sm font-black uppercase tracking-[0.25em] text-amber-300">Launch sale — act before price goes up</p>
           <h2 className="text-3xl font-black leading-tight md:text-5xl">
             <SalePrice />. One payment. If it’s not worth it, you’re out less than lunch.
           </h2>
@@ -410,11 +431,11 @@ export function FacelessBlueprintContent() {
           <div className="mt-8">
             <PriceCompare size="xl" showBadge />
           </div>
-          <SaleCountdownLine className="mx-auto mt-6 max-w-xl text-sm text-[#ffb347]" />
-          <p className="mt-3 text-sm font-black uppercase tracking-[0.2em] text-[#77b255]">One-time · Instant access</p>
+          <SaleCountdownLine className="mx-auto mt-6 max-w-xl text-sm text-amber-300" />
+          <p className="mt-3 text-sm font-black uppercase tracking-[0.2em] text-emerald-400">One-time · Instant access</p>
           <CheckoutLink
             showPrice
-            className="mt-8 inline-flex rounded-full bg-white px-10 py-4 font-black text-[#101515] hover:bg-[#d8dde0]"
+            className="mt-8 inline-flex rounded-full bg-white px-10 py-4 font-black text-[#0a0e0e] hover:bg-[#d8dde0]"
           >
             Download the Playbook
           </CheckoutLink>

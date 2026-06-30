@@ -47,7 +47,7 @@ export function SaleCountdownLine({ className = "" }: { className?: string }) {
         <>Sale ending — price returns to {pricing.formattedRegular} soon.</>
       ) : (
         <>
-          Launch sale ends in <span className="font-black text-[#ffb347]">{countdown.label}</span> — then back to{" "}
+          Launch sale ends in <span className="font-black text-amber-300">{countdown.label}</span> — then back to{" "}
           <span className="font-bold line-through">{pricing.formattedRegular}</span>
         </>
       )}

@@ -1,10 +1,6 @@
-import { PricingProvider } from "@/components/PricingProvider";
-import { FacelessBlueprintContent } from "@/components/FacelessBlueprintContent";
+import { notFound } from "next/navigation";
 
+/** Draft landing — not published. Re-enable by restoring FacelessBlueprintContent here. */
 export default function FacelessBlueprintPage() {
-  return (
-    <PricingProvider>
-      <FacelessBlueprintContent />
-    </PricingProvider>
-  );
+  notFound();
 }

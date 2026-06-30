@@ -3,7 +3,7 @@ import { CONTACT_EMAIL } from "@/lib/constants";
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-[#0b1010] px-5 py-10 text-sm text-[#9aa3a3]">
+    <footer className="border-t border-white/[0.06] bg-[#080b0b] px-5 py-10 text-sm text-[#8a9494]">
       <div className="mx-auto flex max-w-7xl flex-col gap-5 md:flex-row md:items-center md:justify-between">
         <div>
           <p className="font-bold text-white">© 2026 Faceless Blueprint.</p>

@@ -2,13 +2,14 @@
 @config "../../tailwind.config.ts";
 
 :root {
-  --background: #0f1515;
-  --foreground: #e8ecec;
-  --muted: #9aa3a3;
-  --panel: #151d1d;
-  --panel-light: #1d2828;
+  --background: #0a0e0e;
+  --foreground: #f0f4f4;
+  --muted: #8a9494;
+  --panel: #121818;
+  --panel-light: #1a2222;
   --accent: #d8dde0;
-  --green: #77b255;
+  --emerald: #34d399;
+  --cyan: #22d3ee;
 }
 
 * {
@@ -28,7 +29,33 @@ body {
 }
 
 ::selection {
-  background: rgba(119, 178, 85, 0.35);
+  background: rgba(52, 211, 153, 0.35);
+}
+
+.text-gradient-accent {
+  background: linear-gradient(135deg, #34d399 0%, #2dd4bf 45%, #22d3ee 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-image-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(52, 211, 153, 0.35), rgba(34, 211, 238, 0.15), transparent 60%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.card-premium {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+  backdrop-filter: blur(8px);
 }
 
 .file-row {
@@ -79,9 +106,9 @@ body {
 
 .glow-grid {
   background-image:
-    radial-gradient(circle at 20% 20%, rgba(119,178,85,.18), transparent 32%),
-    radial-gradient(circle at 80% 0%, rgba(255,255,255,.08), transparent 25%),
-    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
-  background-size: auto, auto, 48px 48px, 48px 48px;
+    radial-gradient(ellipse 80% 50% at 15% 0%, rgba(52, 211, 153, 0.12), transparent 50%),
+    radial-gradient(ellipse 60% 40% at 85% 10%, rgba(34, 211, 238, 0.08), transparent 45%),
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: auto, auto, 56px 56px, 56px 56px;
 }

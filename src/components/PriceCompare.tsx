@@ -40,7 +40,7 @@ export function PriceCompare({ size = "lg", showBadge = false, align = "center" 
   return (
     <div className={align === "center" ? "text-center" : "text-left"}>
       {showBadge ? (
-        <p className="mb-2 text-sm font-black uppercase tracking-[0.2em] text-[#ffb347]">
+        <p className="mb-2 text-sm font-bold uppercase tracking-[0.2em] text-amber-300">
           {pricing.discountPercent}% off — launch sale
         </p>
       ) : null}
@@ -55,7 +55,7 @@ export function PriceCompare({ size = "lg", showBadge = false, align = "center" 
           usd={pricing.usd.formattedSale}
           className={`font-black text-white ${classes.sale}`}
         />
-        <p className="text-sm text-[#77b255]">
+        <p className="text-sm text-emerald-400">
           You save {pricing.ngn.savings} · {pricing.usd.savings}
         </p>
       </div>
