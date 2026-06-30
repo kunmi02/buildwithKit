@@ -73,6 +73,10 @@ body {
   background: linear-gradient(180deg, #fff, #e8e8e8);
 }
 
+.file-icon.pdf {
+  background: linear-gradient(180deg, #ffe8e8, #f5c4c4);
+}
+
 .glow-grid {
   background-image:
     radial-gradient(circle at 20% 20%, rgba(119,178,85,.18), transparent 32%),
