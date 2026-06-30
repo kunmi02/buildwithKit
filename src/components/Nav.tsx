@@ -15,10 +15,10 @@ export function Nav() {
           </div>
         </Link>
         <nav className="hidden items-center gap-6 text-sm text-[#c7cccc] md:flex">
-          <a href="#offer" className="hover:text-white">The Offer</a>
-          <a href="#niches" className="hover:text-white">Niches</a>
-          <a href="#how" className="hover:text-white">How it works</a>
-          <a href="#faq" className="hover:text-white">FAQ</a>
+          <Link href="/faceless-blueprint#offer" className="hover:text-white">The Offer</Link>
+          <Link href="/faceless-blueprint#niches" className="hover:text-white">Niches</Link>
+          <Link href="/faceless-blueprint#how" className="hover:text-white">How it works</Link>
+          <Link href="/faceless-blueprint#faq" className="hover:text-white">FAQ</Link>
         </nav>
         <CheckoutLink
           showPrice

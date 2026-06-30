@@ -3,7 +3,7 @@ export const PRODUCT_NAME = "Faceless Blueprint";
 export const PRODUCT_FILENAME = "Faceless-Blueprint-Complete.pdf";
 export const CHECKOUT_URL =
   process.env.NEXT_PUBLIC_CHECKOUT_URL || "https://selar.com/64z7171o14";
-export const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "azeezakinkunmi02@gmail.com";
+export const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "facelessblueprints@gmail.com";
 export const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || "";
 export const TIKTOK_PIXEL_ID =
   process.env.NEXT_PUBLIC_TIKTOK_PIXEL_ID || "D8MT5H3C77UDGOQMADAG";
