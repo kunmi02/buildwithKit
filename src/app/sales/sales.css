@@ -15,17 +15,19 @@
 
   background: var(--sales-black);
   color: var(--sales-white);
-  font-size: 16px;
-  line-height: 1.6;
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 1.65;
 }
 
 .sales-page .font-display {
-  font-family: var(--font-syne), system-ui, sans-serif;
+  font-family: var(--font-poppins), system-ui, sans-serif;
 }
 
 .sales-page .font-accent {
-  font-family: var(--font-playfair), Georgia, serif;
+  font-family: var(--font-poppins), system-ui, sans-serif;
   font-style: italic;
+  font-weight: 700;
 }
 
 .sales-bar {
@@ -55,7 +57,7 @@
 }
 
 .sales-logo {
-  font-family: var(--font-syne), system-ui, sans-serif;
+  font-family: var(--font-poppins), system-ui, sans-serif;
   font-weight: 800;
   font-size: 18px;
   color: var(--sales-gold);
@@ -103,7 +105,7 @@
 }
 
 .sales-hero h1 {
-  font-family: var(--font-syne), system-ui, sans-serif;
+  font-family: var(--font-poppins), system-ui, sans-serif;
   font-size: clamp(32px, 6vw, 58px);
   font-weight: 800;
   line-height: 1.08;
@@ -112,7 +114,7 @@
 }
 
 .sales-hero-sub {
-  font-size: clamp(16px, 2.4vw, 20px);
+  font-size: clamp(18px, 2.5vw, 22px);
   color: var(--sales-body);
   max-width: 580px;
   margin: 0 auto 36px;
@@ -142,7 +144,7 @@
 }
 
 .sales-cta-note {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--sales-muted);
   margin-top: 12px;
 }
@@ -165,7 +167,7 @@
 }
 
 .sales-pain h2 {
-  font-family: var(--font-syne), system-ui, sans-serif;
+  font-family: var(--font-poppins), system-ui, sans-serif;
   font-size: clamp(24px, 4vw, 36px);
   font-weight: 800;
   margin-bottom: 20px;
@@ -175,7 +177,7 @@
 .sales-pain p {
   color: var(--sales-body);
   margin-bottom: 16px;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.75;
 }
 
@@ -194,7 +196,7 @@
   gap: 12px;
   padding: 12px 0;
   border-bottom: 1px solid var(--sales-border);
-  font-size: 15px;
+  font-size: 17px;
   color: var(--sales-body);
 }
 
@@ -215,7 +217,7 @@
   padding: 20px 24px;
   border-radius: 0 8px 8px 0;
   margin-top: 8px;
-  font-size: 15px;
+  font-size: 17px;
   color: #cccccc;
   font-style: italic;
 }
@@ -239,7 +241,7 @@
 }
 
 .sales-section-title {
-  font-family: var(--font-syne), system-ui, sans-serif;
+  font-family: var(--font-poppins), system-ui, sans-serif;
   font-size: clamp(26px, 4.5vw, 40px);
   font-weight: 800;
   line-height: 1.15;
@@ -248,14 +250,14 @@
 
 .sales-section-sub {
   color: var(--sales-body);
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 40px;
   line-height: 1.7;
 }
 
 .sales-body-text {
   color: var(--sales-body);
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.75;
 }
 
@@ -293,14 +295,14 @@
 }
 
 .sales-inside-card h3 {
-  font-family: var(--font-syne), system-ui, sans-serif;
+  font-family: var(--font-poppins), system-ui, sans-serif;
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 10px;
 }
 
 .sales-inside-card p {
-  font-size: 14px;
+  font-size: 16px;
   color: #999999;
   line-height: 1.65;
 }
@@ -346,9 +348,9 @@
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  font-size: 14px;
+  font-size: 16px;
   color: #cccccc;
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 .sales-for-card .check {
@@ -368,7 +370,7 @@
   background: var(--sales-gold);
   color: var(--sales-black);
   padding: 20px 32px;
-  font-family: var(--font-syne), system-ui, sans-serif;
+  font-family: var(--font-poppins), system-ui, sans-serif;
   font-weight: 800;
   font-size: 20px;
   text-align: center;
@@ -389,19 +391,19 @@
 }
 
 .sales-offer-item-name {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 600;
   color: var(--sales-white);
 }
 
 .sales-offer-item-desc {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--sales-muted);
   margin-top: 3px;
 }
 
 .sales-offer-item-price {
-  font-family: var(--font-syne), system-ui, sans-serif;
+  font-family: var(--font-poppins), system-ui, sans-serif;
   font-size: 16px;
   font-weight: 800;
   color: var(--sales-gold);
@@ -442,7 +444,7 @@
 }
 
 .sales-offer-total .total-price {
-  font-family: var(--font-syne), system-ui, sans-serif;
+  font-family: var(--font-poppins), system-ui, sans-serif;
   font-size: clamp(36px, 8vw, 52px);
   font-weight: 800;
   color: var(--sales-gold);
@@ -482,7 +484,7 @@
 }
 
 .sales-niche-card .niche-num {
-  font-family: var(--font-syne), system-ui, sans-serif;
+  font-family: var(--font-poppins), system-ui, sans-serif;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -517,7 +519,7 @@
 }
 
 .sales-testi-card p {
-  font-size: 14px;
+  font-size: 16px;
   color: #cccccc;
   line-height: 1.7;
   font-style: italic;
@@ -566,7 +568,7 @@
   border: 1px solid rgba(230, 58, 46, 0.2);
   border-radius: 10px;
   padding: 16px 20px;
-  font-size: 15px;
+  font-size: 17px;
   color: #eeeeee;
   font-weight: 600;
   margin-bottom: 10px;
@@ -586,7 +588,7 @@
   border: 1px solid rgba(39, 174, 96, 0.2);
   border-radius: 10px;
   padding: 16px 20px;
-  font-size: 15px;
+  font-size: 17px;
   color: #cccccc;
   line-height: 1.7;
 }
@@ -612,7 +614,7 @@
 }
 
 .sales-guarantee-box h3 {
-  font-family: var(--font-syne), system-ui, sans-serif;
+  font-family: var(--font-poppins), system-ui, sans-serif;
   font-size: 26px;
   font-weight: 800;
   margin-bottom: 14px;
@@ -620,7 +622,7 @@
 }
 
 .sales-guarantee-box p {
-  font-size: 15px;
+  font-size: 17px;
   color: var(--sales-body);
   line-height: 1.75;
 }
@@ -658,7 +660,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-syne), system-ui, sans-serif;
+  font-family: var(--font-poppins), system-ui, sans-serif;
   font-weight: 800;
   font-size: 16px;
   flex-shrink: 0;
@@ -667,7 +669,7 @@
 }
 
 .sales-step-content h4 {
-  font-family: var(--font-syne), system-ui, sans-serif;
+  font-family: var(--font-poppins), system-ui, sans-serif;
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 6px;
@@ -675,7 +677,7 @@
 }
 
 .sales-step-content p {
-  font-size: 14px;
+  font-size: 16px;
   color: #999999;
   line-height: 1.65;
 }
@@ -686,7 +688,7 @@
 }
 
 .sales-faq-q {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
   cursor: pointer;
   display: flex;
@@ -710,7 +712,7 @@
 }
 
 .sales-faq-a {
-  font-size: 14px;
+  font-size: 16px;
   color: #999999;
   line-height: 1.75;
   margin-top: 12px;
@@ -726,7 +728,7 @@
 }
 
 .sales-final-cta h2 {
-  font-family: var(--font-syne), system-ui, sans-serif;
+  font-family: var(--font-poppins), system-ui, sans-serif;
   font-size: clamp(28px, 5vw, 48px);
   font-weight: 800;
   line-height: 1.1;
@@ -735,7 +737,7 @@
 
 .sales-final-cta p {
   color: #999999;
-  font-size: 15px;
+  font-size: 17px;
   max-width: 480px;
   margin: 0 auto 36px;
   line-height: 1.7;
@@ -786,7 +788,7 @@
 }
 
 .sales-cd-num {
-  font-family: var(--font-syne), system-ui, sans-serif;
+  font-family: var(--font-poppins), system-ui, sans-serif;
   font-size: 32px;
   font-weight: 800;
   color: var(--sales-gold);

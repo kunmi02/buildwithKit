@@ -287,11 +287,11 @@ export function SalesPageContent() {
           chosen, topics listed, 30-day calendar built, AI prompts ready to paste — so you launch your first video{" "}
           <strong>this week</strong>, not after another 6 months of tutorials.
         </p>
-        <CheckoutLink showPrice pricePrefix=" — " className="sales-cta-primary">
+        <CheckoutLink className="sales-cta-primary">
           Yes — I Want the Complete Playbook
         </CheckoutLink>
         <p className="sales-cta-note">
-          One payment · Instant download · No subscription · <span>✓ {pricing.discountPercent}% off launch price</span>
+          One payment · Instant download · No subscription · <span>✓ Full playbook included</span>
         </p>
         <div className="sales-hero-image">
           <Image

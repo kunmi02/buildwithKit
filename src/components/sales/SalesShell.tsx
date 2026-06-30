@@ -1,21 +1,13 @@
-import { Syne, Playfair_Display } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "@/app/sales/sales.css";
 
-const syne = Syne({
+const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["700", "800"],
-  variable: "--font-syne",
-  display: "swap",
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["700"],
-  style: ["italic"],
-  variable: "--font-playfair",
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-poppins",
   display: "swap",
 });
 
 export function SalesShell({ children }: { children: React.ReactNode }) {
-  return <div className={`sales-page ${syne.variable} ${playfair.variable}`}>{children}</div>;
+  return <div className={`sales-page ${poppins.variable}`}>{children}</div>;
 }
