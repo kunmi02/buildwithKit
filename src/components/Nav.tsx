@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { CheckoutLink } from "@/components/CheckoutLink";
 
@@ -18,8 +20,11 @@ export function Nav() {
           <a href="#how" className="hover:text-white">How it works</a>
           <a href="#faq" className="hover:text-white">FAQ</a>
         </nav>
-        <CheckoutLink className="shrink-0 rounded-full bg-white px-3 py-2 text-xs font-bold text-[#101515] hover:bg-[#d8dde0] sm:px-5 sm:text-sm">
-          Get Access — $10
+        <CheckoutLink
+          showPrice
+          className="shrink-0 rounded-full bg-white px-3 py-2 text-xs font-bold text-[#101515] hover:bg-[#d8dde0] sm:px-5 sm:text-sm"
+        >
+          Get Access
         </CheckoutLink>
       </div>
     </header>
